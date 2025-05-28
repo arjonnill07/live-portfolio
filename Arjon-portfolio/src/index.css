@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global base styles */
+body {
+  /* font-family: 'Inter', sans-serif; */ /* This is now set via tailwind.config.js */
+  /* antialiased and bg-slate-50 are handled by Tailwind classes on the root div in App.jsx */
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #334155; /* slate-700 (using hex directly for broader compatibility if needed) */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #64748b; /* slate-500 */
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* slate-400 */
+}
+
+/*
+  The fadeIn animation is defined in tailwind.config.js.
+  The .animate-fadeIn class in App.jsx will use this.
+  You don't need to define @keyframes or .animate-fadeIn here if it's in tailwind.config.js.
+*/
