@@ -5,11 +5,11 @@ import AnimatedCard from './AnimatedCard';
 
 const AboutSection = () => {
   const journeyPoints = [
-    { year: "2015", title: "Early Sparks", description: "Discovered a passion for [Your Early Interest 1] and [Your Early Interest 2], laying the groundwork for future explorations." },
-    { year: "2018", title: "Academic Foundations", description: "Began my [Your Degree] at [Your University], focusing on [Your Key Subject]." },
-    { year: "2020", title: "First Major Project", description: "Developed [Your Project], which solidified my interest in [Your Field]." },
-    { year: "2022", title: "Key Internship/Experience", description: "Gained practical experience at [Company/Organization] as a [Your Role]." },
-    { year: "Present", title: "Continuous Growth", description: "Actively pursuing new challenges in AI, art, and research, always eager to learn and contribute." },
+    { year: "2015", title: "Early Sparks", description: "Discovered a passion for [Your Early Interest 1] and [Your Early Interest 2], laying the groundwork for future explorations.", image: "/images/early_sparks.jpg" },
+    { year: "2018", title: "Academic Foundations", description: "Began my [Your Degree] at [Your University], focusing on [Your Key Subject].", image: "/images/academic_foundations.jpg" },
+    { year: "2020", title: "First Major Project", description: "Developed [Your Project], which solidified my interest in [Your Field].", image: "/images/first_project.jpg" },
+    { year: "2022", title: "Key Internship/Experience", description: "Gained practical experience at [Company/Organization] as a [Your Role].", image: "/images/internship.jpg" },
+    { year: "Present", title: "Continuous Growth", description: "Actively pursuing new challenges in AI, art, and research, always eager to learn and contribute.", image: "/images/growth.jpg" },
   ];
 
   return (
@@ -32,9 +32,16 @@ const AboutSection = () => {
               <div className="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full sm:mx-4">
                 <h3 className="mx-auto font-semibold text-lg text-white">{point.year}</h3>
               </div>
-              <AnimatedCard className={`order-1 sm:w-5/12 px-6 py-4 bg-white shadow-lg rounded-xl border border-teal-200`}>
-                <h4 className="font-bold text-teal-700 text-xl mb-2">{point.title}</h4>
-                <p className="text-sm text-slate-600 leading-snug">{point.description}</p>
+              <AnimatedCard className={`order-1 sm:w-5/12 px-6 py-4 bg-white shadow-lg rounded-xl border border-teal-200 flex flex-col sm:flex-row items-center gap-4`}>
+                <img
+                  src={point.image}
+                  alt={point.title}
+                  className="w-32 h-20 sm:w-40 sm:h-24 object-cover rounded-lg border border-teal-100 shadow-md bg-white flex-shrink-0"
+                />
+                <div className="flex-1 text-left">
+                  <h4 className="font-bold text-teal-700 text-xl mb-2">{point.title}</h4>
+                  <p className="text-sm text-slate-600 leading-snug">{point.description}</p>
+                </div>
               </AnimatedCard>
             </div>
           ))}
