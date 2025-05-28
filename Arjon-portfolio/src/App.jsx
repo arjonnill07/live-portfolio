@@ -37,7 +37,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
               onClick={() => setCurrentPage('home')}
               className="text-2xl font-bold text-slate-800 hover:text-sky-600 transition-colors"
             >
-              Your Name {/* !!! REPLACE THIS !!! */}
+              Arjon Golder {/* !!! REPLACE THIS !!! */}
             </button>
           </div>
           {/* Desktop Navigation */}
@@ -105,18 +105,18 @@ const Footer = () => (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div className="flex justify-center space-x-6 mb-6">
         {/* !!! REPLACE THESE LINKS !!! */}
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
+        <a href="https://www.linkedin.com/in/arjon-golder/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
           <Linkedin size={24} />
         </a>
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
+        <a href="https://github.com/arjonnill07" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
           <Github size={24} />
         </a>
-        <a href="mailto:youremail@example.com" className="hover:text-sky-400 transition-colors">
+        <a href="mailto:arjongoldercse@gmail.com" className="hover:text-sky-400 transition-colors">
           <Mail size={24} />
         </a>
       </div>
-      <p className="text-sm">© {new Date().getFullYear()} Your Name. All rights reserved.</p> {/* !!! REPLACE Your Name !!! */}
-      <p className="text-xs mt-2">Inspired by braydoncoyer.dev. Crafted with React & Tailwind CSS.</p>
+      <p className="text-sm">© {new Date().getFullYear()} Arjon Golder. All rights reserved.</p> {/* !!! REPLACE Your Name !!! */}
+      {/* <p className="text-xs mt-2">Inspired by braydoncoyer.dev. Crafted with React & Tailwind CSS.</p> */}
     </div>
   </footer>
 );
@@ -127,7 +127,7 @@ const HomeSection = ({ setCurrentPage }) => (
     <div className="text-center max-w-3xl">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-800 mb-6">
         <span className="block">Hello, I'm</span>
-        <span className="block text-sky-600 mt-2">Your Name</span> {/* !!! REPLACE THIS !!! */}
+        <span className="block text-sky-600 mt-2">Arjon Golder</span> {/* !!! REPLACE THIS !!! */}
       </h1>
       <p className="text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed">
         A passionate AI Engineer, creative Artist, dedicated Researcher, and aspiring Leader. I thrive on turning complex challenges into innovative solutions and expressing ideas through technology and art. {/* !!! CUSTOMIZE THIS TEXT !!! */}
@@ -174,7 +174,7 @@ const AboutSection = () => {
             I believe life is a canvas of experiences, and I'm dedicated to painting mine with diverse skills and meaningful contributions. From the intricate logic of AI to the expressive freedom of art, my path has been one of continuous learning and creation.
           </p>
           <p>
-            My academic background in [Your Major/Field] from [Your University] (Graduation Year: [Year]) provided a strong foundation, which I've built upon with practical projects, research endeavors, and leadership roles.
+            My academic background in [CSE] from [PSTU] (Graduation Year: [2024]) provided a strong foundation, which I've built upon with practical projects, research endeavors, and leadership roles.
           </p>
         </div>
 
