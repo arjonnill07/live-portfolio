@@ -5,13 +5,9 @@ import { ExternalLink } from 'lucide-react';
 
 const LeadershipSection = () => {
   const events = [
-    { name: "AI Ethics Panel Discussion", role: "Organizer & Moderator", year: "2023", imageUrl: "https://placehold.co/600x400/D97706/FFFFFF?text=AI+Ethics+Panel", link: "#" },
-    { name: "University Tech Fest 'Innovate'", role: "Lead Coordinator", year: "2022", imageUrl: "https://placehold.co/600x400/D97706/FFFFFF?text=Tech+Fest", link: "#" },
-    { name: "Community Coding Workshop", role: "Instructor & Mentor", year: "2023", imageUrl: "https://placehold.co/600x400/D97706/FFFFFF?text=Coding+Workshop", link: "#" },
-  ];
-  const leadershipCerts = [
-    { name: "Project Management Essentials", issuer: "PMI Chapter", year: "2023", imageUrl: "https://placehold.co/400x300/CA8A04/FFFFFF?text=PM+Certificate" },
-    { name: "Agile Leadership Training", issuer: "Scrum Alliance", year: "2022", imageUrl: "https://placehold.co/400x300/CA8A04/FFFFFF?text=Agile+Leadership" },
+    { name: "PSTU IT Carnival 2024", role: "Organizer & Moderator", year: "2024", imageUrl: "/images/it carnival main banner.jpg", link: "https://www.linkedin.com/posts/cse-club-pstu_pstu-it-carnival-2024-activity-7266827251491438593-DPQ1/" },
+    { name: "Inter University Hackathon 2022-24", role: "Lead Coordinator", year: "2022", imageUrl: "/images/IT carnival 2k24 hackathon banner.jpg", link: "https://www.facebook.com/photo/?fbid=884709480413902&set=pcb.884739273744256" },
+    { name: "PSTU Graduation Ceremony ", role: "Organizer", year: "2023", imageUrl: "/images/Antim 18.jpg", link: "https://www.facebook.com/xshwapno/videos/905984687332490" },
   ];
 
   return (
@@ -25,8 +21,8 @@ const LeadershipSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {events.map((event, index) => (
             <AnimatedCard key={index} className="bg-white border border-amber-200 shadow-xl group">
-              <div className="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-lg">
-                <img src={event.imageUrl} alt={event.name} className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300" />
+              <div className="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-lg bg-white flex items-center justify-center">
+                <img src={event.imageUrl} alt={event.name} className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300" />
               </div>
               <h4 className="text-xl font-semibold text-amber-700 mb-1">{event.name}</h4>
               <p className="text-sm text-slate-600 mb-1">Role: {event.role}</p>
@@ -34,18 +30,6 @@ const LeadershipSection = () => {
               <a href={event.link} target="_blank" rel="noopener noreferrer" className="text-sm text-amber-600 hover:text-amber-800 hover:underline inline-flex items-center">
                 Event Details <ExternalLink size={14} className="ml-1.5" />
               </a>
-            </AnimatedCard>
-          ))}
-        </div>
-        <h3 className="text-2xl font-semibold text-amber-700 mb-8 text-center">Leadership Certificates</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {leadershipCerts.map((cert, index) => (
-            <AnimatedCard key={index} className="bg-white border border-amber-200 shadow-xl group">
-               <div className="aspect-w-4 aspect-h-3 mb-3 overflow-hidden rounded-md">
-                <img src={cert.imageUrl} alt={cert.name} className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h4 className="text-md font-semibold text-amber-800 mb-1">{cert.name}</h4>
-              <p className="text-xs text-slate-500">{cert.issuer} - {cert.year}</p>
             </AnimatedCard>
           ))}
         </div>
