@@ -7,7 +7,7 @@ const HomeSection = ({ setCurrentPage }) => (
       {/* Profile photo centered above the greeting */}
       <div className="flex justify-center mb-6">
         <img
-          src="public/images/propic_n.jpg" // Place your photo as public/images/profile.jpg
+          src="images/propic_n.jpg" // Place your photo as public/images/profile.jpg
           alt="Arjon Golder profile"
           className="w-32 h-32 rounded-full object-cover border-4 border-sky-200 shadow-lg"
         />
