@@ -21,7 +21,7 @@ const HomeSection = ({ setCurrentPage }) => (
       </p>
       <div className="space-y-4 sm:space-y-0 sm:space-x-4">
         <a
-          href="https://placehold.co/your_cv.pdf"
+          href="/documents/Arjon_Golder_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-sky-600 hover:bg-sky-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
