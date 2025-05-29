@@ -13,6 +13,23 @@ const AboutSection = () => {
     { year: "", title: "The journey continues..." },
   ];
 
+  // Academic Journey Points
+  const academicJourney = [
+    { year: "2016", title: "SSC, KZS16", description: "GPA: 5.00" },
+    { year: "2018", title: "HSC, Govt. M.M City College", description: "GPA: 5.00" },
+    { year: "2024", title: "B.Sc, CSE, PSTU", description: "Ranked 16th among the 80 students." },
+    { year: "2026 (expected)", title: "M.Sc, CSE, KU", description: "Pursuing M.Sc. in Computer Science & Engineering at Khulna University." },
+  ];
+
+  // Professional Journey Points
+  const professionalJourney = [
+    { year: "2020", title: "Learning Mentor", description: "Guiding school and college students in their learning journeys." },
+    { year: "2023", title: "Mentor & Researcher", description: "Mentoring junior engineers and contributing to research in AI/ML through the 'AI & Research Enthusiasts Program'." },
+    { year: "2024", title: "AI Engineer, [CDSR]", description: "Started professional career as an AI Engineer, working on impactful projects." },
+    //{ year: "2025", title: "Mentor & Researcher", description: "Mentoring junior engineers and contributing to research in AI/ML." },
+    { year: "Future", title: "Continuous Growth", description: "Committed to lifelong learning and impactful contributions in tech." },
+  ];
+
   return (
     <section id="about" className="py-16 sm:py-24 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 text-slate-700 px-4">
       <div className="container mx-auto">
@@ -21,9 +38,13 @@ const AboutSection = () => {
           <p className="mb-4">
             I believe life is a canvas of experiences, and I'm dedicated to painting mine with diverse skills and meaningful contributions. From the intricate logic of AI to the expressive freedom of art, my path has been one of continuous learning and creation.
           </p>
-          <p>
-            My academic background in [CSE] from [PSTU] (Graduation Year: [2024]) provided a strong foundation, which I've built upon with practical projects, research endeavors, and leadership roles.
-          </p> 
+
+        </div>
+        {/* Highlights Title and Animation */}
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-cyan-500 to-emerald-500 drop-shadow-lg tracking-wider animate-fadeInUp">Highlights</h2>
+          <div className="mt-2 mb-4 w-24 h-1 bg-gradient-to-r from-teal-400 via-cyan-400 to-emerald-400 rounded-full animate-pulse"></div>
+          <div className="animate-bounce text-2xl text-teal-400 mb-2">&#8595;</div>
         </div>
         <div className="relative max-w-4xl mx-auto">
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-teal-300 transform -translate-x-1/2 hidden sm:block"></div>
@@ -70,6 +91,33 @@ const AboutSection = () => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="mt-16 max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl font-semibold text-teal-700 mb-6">Academic Journey</h3>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-0 mb-12">
+            {academicJourney.map((item, idx) => (
+              <React.Fragment key={idx}>
+                <AnimatedCard className="flex-1 min-w-[220px] bg-white border border-teal-200 shadow-md flex flex-col items-center px-4 py-6 mx-0">
+                  <div className="text-teal-600 font-bold text-lg mb-2">{item.year}</div>
+                  <div className="font-semibold text-teal-800 mb-1">{item.title}</div>
+                  <div className="text-slate-600 text-sm">{item.description}</div>
+                </AnimatedCard>
+                {idx < academicJourney.length - 1 && (
+                  <span className="hidden sm:inline-block mx-2 text-3xl text-teal-400 align-middle select-none">&#8594;</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+          <h3 className="text-2xl font-semibold text-teal-700 mb-6">Professional Journey</h3>
+          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+            {professionalJourney.map((item, idx) => (
+              <AnimatedCard key={idx} className="flex-1 min-w-[220px] bg-white border border-teal-200 shadow-md flex flex-col items-center px-4 py-6">
+                <div className="text-teal-600 font-bold text-lg mb-2">{item.year}</div>
+                <div className="font-semibold text-teal-800 mb-1">{item.title}</div>
+                <div className="text-slate-600 text-sm">{item.description}</div>
+              </AnimatedCard>
+            ))}
+          </div>
         </div>
       </div>
     </section>
