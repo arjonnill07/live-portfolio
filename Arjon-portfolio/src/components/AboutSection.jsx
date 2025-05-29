@@ -7,10 +7,10 @@ const AboutSection = () => {
   const journeyPoints = [
     { year: "2014", title: "Duronto Prottoy", description: "A group of Teenagers of KZS16 Discovered a passion for volunteering and community service that impacted 500+ beneficiaries.", image: "/images/early_sparks.jpg" },
     { year: "2020", title: "Campusnama,PSTU", description: "Founded Bangladesh’s only university-based band focused on original music composition.", image: "/images/The campusnama gang.jpg" },
-    { year: "2019-24", title: "CSE CLUB,PSTU", description: "Serving as a member to General Secretary,transforming PSTU’s CSE Club into Bangladesh’s premier student tech organization.", image: "/images/honor from vc pstu.jpg" },
+    { year: " ", title: "CSE CLUB,PSTU", description: "Serving as a member to General Secretary,transforming PSTU’s CSE Club into Bangladesh’s premier student tech organization.", image: "/images/honor from vc pstu.jpg" },
     { year: "2024", title: "ICICT,BUET", description: "Authored & Presented a research paper on Federated Medical AI at the International Conference on ICT.", image: "/images/the certificate.jpg" },
     { year: "2025", title: "CSE,KU", description: "Gained 1st position in M.Sc Admission Test.", image: "/images/KU Chairman Honor.jpg" },
-    { year: "", title: "The journey continues..." },
+    { year: " ", title: "The journey continues..." },
   ];
 
   // Academic Journey Points
