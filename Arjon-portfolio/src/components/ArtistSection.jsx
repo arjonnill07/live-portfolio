@@ -22,72 +22,39 @@ const ArtistSection = () => {
         {/* Artistic Photo Gallery - la vie */}
         <h3 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-400 to-amber-300 drop-shadow-lg tracking-wider mb-8">la vie</h3>
         <div className="mb-20">
-          <div className="bg-white/0 p-0 border-0 shadow-none">
-            {/* To add images, simply add objects to the laVieImages array below */}
-            {(() => {
-              const laVieImages = [
-                {
-                  src: "/images/campusnama_craftlive22.jpg",
-                  alt: "Live at Craft Live22",
-                  title: "Live at Craft Live22",
-                  desc: "The crowd, the lights, the energy—pure freedom on stage."
-                },
-                {
-                  src: "/images/campusnama stories.jpg",
-                  alt: "Open Air Concert",
-                  title: "Open Air Concert",
-                  desc: "A magical night under the stars, music echoing through the campus."
-                },
-                {
-                  src: "/images/Campusnama at ku.jpg",
-                  alt: "Inter University Music Fest, KU 2024",
-                  title: "Inter University Music Fest, KU 2024",
-                  desc: "Lost in the rhythm, found in the moment."
-                },
-                {
-                  src: "/images/the back and white hand.jpg",
-                  alt: "Combined Graduation ceremony, PSTU 2023",
-                  title: "Combined Graduation ceremony, PSTU 2023",
-                  desc: "Night full of memories and bonds of brotherhood."
-                },
-                 {
-                  src: "/images/the great black and white redemption.jpg",
-                  alt: "Combined Graduation ceremony, PSTU 2023",
-                  title: "Combined Graduation ceremony,PSTU 2023",
-                  desc: "Night full of memories and bonds of brotherhood."
-                },
-                // Add more images here, e.g.:
-                // {
-                //   src: "/images/your_image.jpg",
-                //   alt: "Description",
-                //   title: "Title",
-                //   desc: "Poetic caption or story."
-                // }
-              ];
-              return (
-                <div className="flex overflow-x-auto gap-6 md:gap-10 pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-pink-200 scrollbar-track-pink-50">
-                  {laVieImages.map((img, i) => (
-                    <div
-                      key={i}
-                      className="group relative min-w-[260px] sm:min-w-[320px] max-w-xs rounded-2xl overflow-hidden flex flex-col justify-end transition-transform hover:scale-105 duration-300 snap-center bg-white/0 border-0 shadow-none"
-                    >
-                      <img
-                        src={img.src}
-                        alt={img.alt}
-                        className="w-full h-56 sm:h-64 object-contain object-center bg-white transition-transform duration-500 ease-in-out group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        <div className="p-4 md:p-6">
-                          <h4 className="text-lg sm:text-xl font-semibold text-white drop-shadow mb-1 md:mb-2 tracking-tight">{img.title}</h4>
-                          <p className="text-sm sm:text-base text-pink-100 italic leading-snug">{img.desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              );
-            })()}
-          </div>
+          <AlbumSlider images={(() => [
+            {
+              src: "/images/campusnama_craftlive22.jpg",
+              alt: "Live at Craft Live22",
+              title: "Live at Craft Live22",
+              desc: "The crowd, the lights, the energy—pure freedom on stage."
+            },
+            {
+              src: "/images/campusnama stories.jpg",
+              alt: "Open Air Concert",
+              title: "Open Air Concert",
+              desc: "A magical night under the stars, music echoing through the campus."
+            },
+            {
+              src: "/images/Campusnama at ku.jpg",
+              alt: "Inter University Music Fest, KU 2024",
+              title: "Inter University Music Fest, KU 2024",
+              desc: "Lost in the rhythm, found in the moment."
+            },
+            {
+              src: "/images/the back and white hand.jpg",
+              alt: "Combined Graduation ceremony, PSTU 2023",
+              title: "Combined Graduation ceremony, PSTU 2023",
+              desc: "Night full of memories and bonds of brotherhood."
+            },
+            {
+              src: "/images/the great black and white redemption.jpg",
+              alt: "Combined Graduation ceremony, PSTU 2023",
+              title: "Combined Graduation ceremony,PSTU 2023",
+              desc: "Night full of memories and bonds of brotherhood."
+            },
+            // Add more images here
+          ])()} />
         </div>
         {/* Video Gallery */}
         <h3 className="text-2xl font-bold text-purple-700 mb-4 mt-10 text-center">Performance Videos</h3>
@@ -129,3 +96,56 @@ const ArtistSection = () => {
 };
 
 export default ArtistSection;
+
+function AlbumSlider({ images }) {
+  const [current, setCurrent] = React.useState(0);
+  const total = images.length;
+  const prev = () => setCurrent(c => (c - 1 + total) % total);
+  const next = () => setCurrent(c => (c + 1) % total);
+
+  return (
+    <div className="relative w-full max-w-3xl mx-auto">
+      <div className="flex items-center justify-center">
+        <button
+          aria-label="Previous"
+          onClick={prev}
+          className="absolute left-0 z-10 bg-white/80 hover:bg-pink-100 text-pink-500 rounded-full shadow p-2 top-1/2 -translate-y-1/2 transition-all"
+        >
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeWidth="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <div className="w-full flex justify-center">
+          <div className="group relative min-w-[260px] sm:min-w-[320px] max-w-xs rounded-2xl overflow-hidden flex flex-col justify-end transition-transform duration-300 bg-white/0 border-0 shadow-none">
+            <img
+              src={images[current].src}
+              alt={images[current].alt}
+              className="w-full h-56 sm:h-64 object-contain object-center bg-white transition-transform duration-500 ease-in-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              <div className="p-4 md:p-6">
+                <h4 className="text-lg sm:text-xl font-semibold text-white drop-shadow mb-1 md:mb-2 tracking-tight">{images[current].title}</h4>
+                <p className="text-sm sm:text-base text-pink-100 italic leading-snug">{images[current].desc}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          aria-label="Next"
+          onClick={next}
+          className="absolute right-0 z-10 bg-white/80 hover:bg-pink-100 text-pink-500 rounded-full shadow p-2 top-1/2 -translate-y-1/2 transition-all"
+        >
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div className="flex justify-center mt-4 gap-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            className={`w-3 h-3 rounded-full ${i === current ? 'bg-pink-500' : 'bg-pink-200'} transition-all`}
+            onClick={() => setCurrent(i)}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
