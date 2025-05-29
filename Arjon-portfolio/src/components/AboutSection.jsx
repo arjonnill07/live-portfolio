@@ -5,11 +5,11 @@ import AnimatedCard from './AnimatedCard';
 
 const AboutSection = () => {
   const journeyPoints = [
-    { year: "2015", title: "Early Sparks", description: "Discovered a passion for [Your Early Interest 1] and [Your Early Interest 2], laying the groundwork for future explorations.", image: "/images/early_sparks.jpg" },
-    { year: "2018", title: "Academic Foundations", description: "Began my [Your Degree] at [Your University], focusing on [Your Key Subject].", image: "/images/academic_foundations.jpg" },
-    { year: "2020", title: "First Major Project", description: "Developed [Your Project], which solidified my interest in [Your Field].", image: "/images/first_project.jpg" },
-    { year: "2022", title: "Key Internship/Experience", description: "Gained practical experience at [Company/Organization] as a [Your Role].", image: "/images/internship.jpg" },
-    { year: "Present", title: "Continuous Growth", description: "Actively pursuing new challenges in AI, art, and research, always eager to learn and contribute.", image: "/images/growth.jpg" },
+    { year: "2014", title: "Duronto Prottoy", description: "A group of Teenagers of KZS16 Discovered a passion for volunteering and community service that impacted 500+ beneficiaries.", image: "/images/early_sparks.jpg" },
+    { year: "2020", title: "Campusnama,PSTU", description: "Founded Bangladesh’s only university-based band focused on original music composition.", image: "/images/The campusnama gang.jpg" },
+    { year: "2019 - 2024", title: "CSE CLUB,PSTU", description: "Serving as a member to General Secretary,led CSE CLUB,PSTU to be one of the prominent student organizations of Bangladesh.", image: "/images/honor from vc pstu.jpg" },
+    { year: "2024", title: "ICICT,BUET", description: "Authored & Presented research on Federated Medical AI at the International Conference on ICT.", image: "/images/the certificate.jpg" },
+    { year: "2025", title: "CSE,KU", description: "Gained 1st position in M.Sc Admission Test.", image: "/images/KU Chairman Honor.jpg" },
   ];
 
   return (
@@ -32,16 +32,14 @@ const AboutSection = () => {
               <div className="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full sm:mx-4">
                 <h3 className="mx-auto font-semibold text-lg text-white">{point.year}</h3>
               </div>
-              <AnimatedCard className={`order-1 sm:w-5/12 px-6 py-4 bg-white shadow-lg rounded-xl border border-teal-200 flex flex-col sm:flex-row items-center gap-4`}>
+              <AnimatedCard className={`order-1 sm:w-5/12 px-6 py-6 bg-white shadow-lg rounded-xl border border-teal-200 flex flex-col items-center text-center`}>
+                <h4 className="font-bold text-teal-700 text-xl mb-3">{point.title}</h4>
                 <img
                   src={point.image}
                   alt={point.title}
-                  className="w-32 h-20 sm:w-40 sm:h-24 object-cover rounded-lg border border-teal-100 shadow-md bg-white flex-shrink-0"
+                  className="w-40 h-28 object-cover rounded-lg border border-teal-100 shadow-md bg-white mb-3"
                 />
-                <div className="flex-1 text-left">
-                  <h4 className="font-bold text-teal-700 text-xl mb-2">{point.title}</h4>
-                  <p className="text-sm text-slate-600 leading-snug">{point.description}</p>
-                </div>
+                <p className="text-sm text-slate-600 leading-snug">{point.description}</p>
               </AnimatedCard>
             </div>
           ))}
@@ -70,3 +68,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
