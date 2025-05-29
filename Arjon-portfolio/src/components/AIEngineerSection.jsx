@@ -6,31 +6,50 @@ import { Github, ExternalLink } from 'lucide-react';
 const AIEngineerSection = () => {
   const aiProjects = [
     {
-      title: "Intelligent Recommendation System",
-      description: "A collaborative filtering based recommendation engine for e-commerce, improving user engagement by 15%.",
-      technologies: ["Python", "TensorFlow", "Flask", "Docker"],
-      githubLink: "https://github.com/yourusername/recsys-project",
-      liveLink: "#"
+      title: "Smart Augmentation of Brain Tumor MRI Dataset",
+      description: "Research-driven augmentation techniques to improve model generalization for medical imaging. Enhanced dataset diversity and reduced overfitting for brain tumor classification.",
+      technologies: ["Python", "Keras", "OpenCV", "Jupyter"],
+      githubLink: "https://github.com/arjonnill07/smart-augmentation-of-Brain-tumor-MRi-dataset-",
     },
     {
-      title: "NLP-Powered Chatbot",
-      description: "Developed a customer service chatbot using BERT for intent recognition and response generation.",
-      technologies: ["Python", "PyTorch", "Hugging Face Transformers", "FastAPI"],
-      githubLink: "https://github.com/yourusername/nlp-chatbot",
+      title: "Liver Fibrosis App",
+      description: "Clinical decision support system for liver fibrosis risk prediction. Integrated ML models with an interactive web interface for clinicians.",
+      technologies: ["Python", "Scikit-learn", "Streamlit"],
+      githubLink: "https://github.com/arjonnill07/liver-fibrosis-app",
     },
     {
-      title: "Computer Vision for Anomaly Detection",
-      description: "Implemented a CNN model to detect anomalies in manufacturing processes from image data.",
-      technologies: ["Python", "OpenCV", "Keras", "AWS Sagemaker"],
-      githubLink: "https://github.com/yourusername/cv-anomaly",
-      liveLink: "#"
+      title: "Clinical CDSS Readmission",
+      description: "Predictive analytics for hospital readmission using clinical data. Developed robust data pipelines and interpretable ML models.",
+      technologies: ["Python", "Pandas", "ML"],
+      githubLink: "https://github.com/arjonnill07/clinical-cdss-readmission",
+    },
+    {
+      title: "Federated Medical AI (ICICT 2024)",
+      description: "Published research on privacy-preserving federated learning for medical data. Designed and evaluated federated models for sensitive healthcare applications.",
+      technologies: ["Python", "TensorFlow Federated"],
+      githubLink: "https://www.linkedin.com/in/arjon-golder/", // Link to publication or profile
     },
   ];
 
   const skills = [
-    { name: "Python", level: 95 }, { name: "TensorFlow", level: 90 }, { name: "PyTorch", level: 85 },
-    { name: "Scikit-learn", level: 90 }, { name: "NLP", level: 88 }, { name: "Computer Vision", level: 82 },
-    { name: "Docker", level: 75 }, { name: "Kubernetes", level: 60 }, { name: "AWS/GCP", level: 70 },
+    { name: "Python", level: 98 },
+    { name: "TensorFlow", level: 92 },
+    { name: "PyTorch", level: 90 },
+    { name: "Keras", level: 88 },
+    { name: "Scikit-learn", level: 90 },
+    { name: "Pandas", level: 88 },
+    { name: "NumPy", level: 87 },
+    { name: "Hugging Face Transformers", level: 85 },
+    { name: "OpenCV", level: 83 },
+    { name: "FastAPI", level: 80 },
+    { name: "Flask", level: 80 },
+    { name: "Docker", level: 78 },
+    { name: "Kubernetes", level: 65 },
+    { name: "AWS/GCP", level: 75 },
+    { name: "Federated Learning", level: 80 },
+    { name: "MLOps", level: 75 },
+    { name: "Prompt Engineering", level: 80 },
+    { name: "Reproducible Research", level: 85 },
   ];
 
   return (
