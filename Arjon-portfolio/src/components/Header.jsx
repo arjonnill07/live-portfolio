@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, User, Brain, Palette, Mic2, Award, Users, BookOpen, Menu, X, Linkedin, Github, Mail } from 'lucide-react';
+import { Home, User, Brain, Palette, Mic2, Award, Users, BookOpen, Menu, X, Linkedin, Github, Mail, MailOpen } from 'lucide-react';
 
 const navLinks = [
   { id: 'home', text: 'Home', icon: <Home size={18} /> },
@@ -9,6 +9,7 @@ const navLinks = [
   { id: 'researcher', text: 'Researcher', icon: <Mic2 size={18} /> },
   { id: 'leadership', text: 'Leadership', icon: <Users size={18} /> },
   { id: 'blog', text: 'Blog', icon: <BookOpen size={18} /> },
+  { id: 'get-in-touch', text: 'Get in Touch', icon: <MailOpen size={18} /> },
 ];
 
 const Header = ({ currentPage, setCurrentPage }) => {
@@ -21,9 +22,10 @@ const Header = ({ currentPage, setCurrentPage }) => {
           <div className="flex-shrink-0">
             <button
               onClick={() => setCurrentPage('home')}
-              className="text-2xl font-bold text-slate-800 hover:text-sky-600 transition-colors"
+              className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg transition-all duration-300 ease-in-out"
+              style={{ letterSpacing: '0.04em' }}
             >
-              Arjon Golder
+              <span className="inline-block">Arjon Golder</span>
             </button>
           </div>
           <nav className="hidden md:flex space-x-1 lg:space-x-2">

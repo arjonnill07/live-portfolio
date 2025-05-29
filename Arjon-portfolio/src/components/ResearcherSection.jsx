@@ -5,14 +5,56 @@ import { ExternalLink } from 'lucide-react';
 
 const ResearcherSection = () => {
   const publications = [
-    { title: "Advancements in Few-Shot Learning for NLP", journal: "Journal of AI Research, Vol. 3", year: "2023", link: "#" },
-    { title: "Ethical Considerations in AI Model Deployment", journal: "AI & Society Conference Proceedings", year: "2022", link: "#" },
-    { title: "A Novel Approach to Anomaly Detection in Time Series Data", journal: "Preprint arXiv:xxxx.xxxxx", year: "2024", link: "#" },
+    {
+      title: "Federated Learning for Medical AI (ICICT 2024)",
+      journal: "International Conference on ICT, BUET",
+      year: "2024",
+      link: "https://www.linkedin.com/in/arjon-golder/" // Replace with actual publication link if available
+    },
+    {
+      title: "Smart Augmentation of Brain Tumor MRI Dataset",
+      journal: "Research Project, PSTU",
+      year: "2023",
+      link: "https://github.com/arjonnill07/smart-augmentation-of-Brain-tumor-MRi-dataset-"
+    },
+    {
+      title: "Liver Fibrosis Clinical Decision Support System",
+      journal: "Capstone Project, PSTU",
+      year: "2023",
+      link: "https://github.com/arjonnill07/liver-fibrosis-app"
+    },
+    {
+      title: "Predictive Analytics for Hospital Readmission",
+      journal: "Academic Project, PSTU",
+      year: "2022",
+      link: "https://github.com/arjonnill07/clinical-cdss-readmission"
+    },
   ];
   const certificates = [
-    { name: "Deep Learning Specialization", issuer: "Coursera & deeplearning.ai", year: "2022", imageUrl: "https://placehold.co/400x300/0284C7/FFFFFF?text=Deep+Learning+Cert" },
-    { name: "Research Methodology Workshop", issuer: "My University", year: "2021", imageUrl: "https://placehold.co/400x300/0284C7/FFFFFF?text=Research+Workshop" },
-    { name: "Data Science Ethics", issuer: "Reputable Institute", year: "2023", imageUrl: "https://placehold.co/400x300/0284C7/FFFFFF?text=Data+Ethics+Cert" },
+    {
+      name: "Deep Learning Specialization",
+      issuer: "Coursera & deeplearning.ai",
+      year: "2022",
+      imageUrl: "https://placehold.co/400x300/0284C7/FFFFFF?text=Deep+Learning+Cert"
+    },
+    {
+      name: "Research Methodology Workshop",
+      issuer: "Patuakhali Science and Technology University",
+      year: "2021",
+      imageUrl: "https://placehold.co/400x300/0284C7/FFFFFF?text=Research+Workshop"
+    },
+    {
+      name: "Best Paper Award (ICICT 2024)",
+      issuer: "International Conference on ICT, BUET",
+      year: "2024",
+      imageUrl: "https://placehold.co/400x300/0284C7/FFFFFF?text=Best+Paper+Award"
+    },
+    {
+      name: "Data Science Ethics",
+      issuer: "Reputable Institute",
+      year: "2023",
+      imageUrl: "https://placehold.co/400x300/0284C7/FFFFFF?text=Data+Ethics+Cert"
+    },
   ];
 
   return (

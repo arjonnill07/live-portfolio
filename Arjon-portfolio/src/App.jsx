@@ -8,6 +8,7 @@ import ArtistSection from './components/ArtistSection';
 import ResearcherSection from './components/ResearcherSection';
 import LeadershipSection from './components/LeadershipSection';
 import BlogSection from './components/BlogSection';
+import GetInTouch from './components/GetInTouch';
 
 // Main App Component
 export default function App() {
@@ -38,6 +39,8 @@ export default function App() {
         return <LeadershipSection />;
       case 'blog':
         return <BlogSection />;
+      case 'get-in-touch':
+        return <GetInTouch />;
       default:
         return <HomeSection setCurrentPage={setCurrentPage} />;
     }

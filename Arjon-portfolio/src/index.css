@@ -30,3 +30,19 @@ body {
   The .animate-fadeIn class in App.jsx will use this.
   You don't need to define @keyframes or .animate-fadeIn here if it's in tailwind.config.js.
 */
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+@keyframes navbarLogoPulse {
+  0%, 100% { filter: drop-shadow(0 0 8px #38bdf8); }
+  50% { filter: drop-shadow(0 0 24px #a21caf); }
+}
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradient-move 3s linear infinite alternate;
+}
+.animate-navbarLogoPulse {
+  animation: navbarLogoPulse 2.5s infinite;
+}

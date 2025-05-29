@@ -19,7 +19,7 @@ const HomeSection = ({ setCurrentPage }) => (
       <p className="text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed">
         A passionate AI Engineer, creative Artist, dedicated Researcher, and aspiring Leader. I thrive on turning complex challenges into innovative solutions and expressing ideas through technology and art.
       </p>
-      <div className="space-y-4 sm:space-y-0 sm:space-x-4">
+      <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center">
         <a
           href="/documents/Arjon_Golder_CV.pdf"
           target="_blank"
@@ -35,6 +35,13 @@ const HomeSection = ({ setCurrentPage }) => (
         >
           Learn More About Me
           <User size={20} className="ml-2" />
+        </button>
+        <button
+          onClick={() => setCurrentPage('get-in-touch')}
+          className="inline-flex items-center justify-center px-8 py-3 border border-sky-600 text-base font-medium rounded-lg text-sky-600 bg-white hover:bg-sky-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          Get in Touch
+          <span className="ml-2" role="img" aria-label="mail">📬</span>
         </button>
       </div>
     </div>
