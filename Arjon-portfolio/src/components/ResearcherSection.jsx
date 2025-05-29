@@ -92,7 +92,7 @@ const ResearcherSection = () => {
       <div className="container mx-auto">
         <SectionTitle>The <span className="text-blue-700">Researcher</span> Mindset</SectionTitle>
         <p className="text-center max-w-2xl mx-auto text-slate-600 mb-12 text-lg">
-          Driven by curiosity and a systematic approach to uncover new knowledge and insights, particularly in the fields of [Your Research Area 1] and [Your Research Area 2].
+          I am a relentless explorer—fusing curiosity, creativity, and discipline to turn questions into discoveries. My research is driven by a desire to solve real problems, connect ideas across fields, and leave a meaningful mark on the world.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>

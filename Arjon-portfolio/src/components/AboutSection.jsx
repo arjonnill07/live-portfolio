@@ -36,7 +36,7 @@ const AboutSection = () => {
         <SectionTitle>My Journey & Qualifications</SectionTitle>
         <div className="max-w-3xl mx-auto mb-12 text-lg text-center leading-relaxed">
           <p className="mb-4">
-            I believe life is a canvas of experiences, and I'm dedicated to painting mine with diverse skills and meaningful contributions. From the intricate logic of AI to the expressive freedom of art, my path has been one of continuous learning and creation.
+            I believe life is a canvas of experiences, and I'm dedicated to painting mine with diverse skills and meaningful contributions. 
           </p>
 
         </div>
